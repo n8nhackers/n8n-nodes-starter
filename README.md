@@ -16,8 +16,8 @@ You need the following installed on your development machine:
 * Node.js and npm. Minimum version Node 20. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows). Depending on your n8n version, one node version or another will be required to start n8n: 
 	```
 	# n8n 1.103.1 requires lts/iron
-	# There is a .nvmrc that sets the required minimum version for n8n.
-	# Run to install the minimum version
+	# There is a .nvmrc file that sets the minimum version for n8n using nvm.
+	# Run the next command to install the required version to start
 	nvm use
 	```
 * Install n8n with:
