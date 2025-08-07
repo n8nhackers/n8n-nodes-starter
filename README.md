@@ -1,8 +1,8 @@
-![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
+![Banner image](images/n8n-and-n8nhackers.png)
 
 # n8n-nodes-starter
 
-This repo contains example nodes to help you get started building your own custom integrations for [n8n](https://n8n.io). It includes the node linter and other dependencies.
+This repo contains example nodes to help you get started building your own custom integrations for [n8n](https://n8n.io) and [n8n hackers](https://n8nhackers.com). It includes the node linter and other dependencies.
 
 To make your custom node available to the community, you must create it as an npm package, and [submit it to the npm registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
 
@@ -24,7 +24,7 @@ You need the following installed on your development machine:
 
 These are the basic steps for working with the starter. For detailed guidance on creating and publishing nodes, refer to the [documentation](https://docs.n8n.io/integrations/creating-nodes/).
 
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from this template repository.
+1. [Generate a new repository](https://github.com/n8nhackers/n8n-nodes-starter/generate) from this template repository.
 2. Clone your new repo:
    ```
    git clone https://github.com/<your organization>/<your-repo-name>.git
@@ -34,15 +34,63 @@ These are the basic steps for working with the starter. For detailed guidance on
 5. Browse the examples in `/nodes` and `/credentials`. Modify the examples, or replace them with your own nodes.
 6. Update the `package.json` to match your details.
 7. Run `npm run lint` to check for errors or `npm run lintfix` to automatically fix errors when possible.
-8. Test your node locally. Refer to [Run your node locally](https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/) for guidance.
-9. Replace this README with documentation for your node. Use the [README_TEMPLATE](README_TEMPLATE.md) to get started.
+8. Test your node locally. Refer to [Run your node locally](https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/) for guidance, or follow the next steps:
+```sh
+
+# Build a compiled version. Always.
+npm run build
+
+# Link built version in the system. One-time.
+npm link
+
+# Create custom directory in .n8n if required. One-time.
+mkdir -p ~/.n8n/custom/
+
+# Go to custom directory. One-time.
+cd ~/.n8n/custom/
+
+# Link current community node in the directory. One-time.
+# It will be installed under ~/.n8n/custom/node_modules
+npm link n8n-nodes-starter
+
+# Start n8n to test your community node. Always.
+n8n start
+```
+10. Replace this README with documentation for your node. Use the [README_TEMPLATE](README_TEMPLATE.md) to get started.
 10. Update the LICENSE file to use your details.
 11. [Publish](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) your package to npm.
+```sh
+# Push changes to repository
+git commit -a -m "Change X"
+git push
+
+# Login with npm
+npm login
+
+# Publish the version
+npm publish
+```
 
 ## More information
 
 Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/creating-nodes/) for detailed information on building your own nodes.
 
+## Version history
+
+Here you can find the list of changes applied to this node:
+- 0.0.1: Initial version
+
+## Issues
+
+If you have any issues, please [let us know on GitHub](https://github.com/n8nhackers/n8n-nodes-brightdata/issues).
+
+## About
+
+Nodes by [n8nhackers.com](https://n8nhackers.com). For productive use and consulting on this, [contact us please](mailto:support@n8nhackers.com).
+
+Special thanks to [N8n nodemation](https://n8n.io) workflow automation by Jan Oberhauser.
+
 ## License
 
 [MIT](https://github.com/n8n-io/n8n-nodes-starter/blob/master/LICENSE.md)
+
