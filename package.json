@@ -39,6 +39,7 @@
     "nodes": [
       "dist/nodes/HelloWorld/HelloWorld.node.js",
       "dist/nodes/HelloWorld2/HelloWorld2.node.js",
+      "dist/nodes/HelloWorld3/HelloWorld3.node.js",
       "dist/nodes/HttpBin/HttpBin.node.js"
     ]
   },
