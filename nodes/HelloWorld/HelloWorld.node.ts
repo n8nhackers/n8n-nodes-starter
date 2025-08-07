@@ -66,6 +66,8 @@ export class HelloWorld implements INodeType {
 				}
 				item = items[itemIndex];
 
+				console.log(`Greeting: ${greeting}`);
+
 				item.json.greeting = greeting;
 			} catch (error) {
 				if (this.continueOnFail()) {

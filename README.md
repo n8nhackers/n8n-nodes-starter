@@ -61,7 +61,6 @@ npm link n8n-nodes-starter
 # Check existing link. First time execution.
 npm -g ls
 #output sample:
-# ├── n8n-nodes-brightdata@0.1.37 -> ./../../../../../Documents/companies/n8nhackers/n8n-nodes-brightdata
 # ├── n8n-nodes-starter@0.1.0 -> ./../../../../../Documents/companies/n8nhackers/n8n-nodes-starter
 
 # Start n8n to test your community node. Always.
@@ -87,6 +86,12 @@ npm publish
 To make your custom node available to the community, you must create it as an npm package, and [submit it to the npm registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
 
 If you would like your node to be available on n8n cloud you can also [submit your node for verification](https://docs.n8n.io/integrations/creating-nodes/deploy/submit-community-nodes/).
+
+## TL;DR 
+
+You can also use the next ready-to-use samples for your n8n (self-hosted version):
+
+- [Sample n8n-nodes-starter](https://raw.githubusercontent.com/n8nhackers/n8n-nodes-starter/refs/heads/main/use-cases/sample-n8n-nodes-starter.json)![Sample n8n-nodes-starter](images/sample-n8n-nodes-starter.png?raw=true "Sample n8n-nodes-starter")
 
 ## More information
 
