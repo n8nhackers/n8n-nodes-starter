@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "A starter template for creating n8n community nodes",
   "keywords": [
-    "n8n-community-node-package"
+    "n8n-community-node-package",
+    "starter template"
   ],
   "license": "MIT",
   "homepage": "",
