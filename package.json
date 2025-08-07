@@ -37,7 +37,8 @@
       "dist/credentials/HttpBinApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
+      "dist/nodes/HelloWorld/HelloWorld.node.js",
+      "dist/nodes/HelloWorld2/HelloWorld2.node.js",
       "dist/nodes/HttpBin/HttpBin.node.js"
     ]
   },
