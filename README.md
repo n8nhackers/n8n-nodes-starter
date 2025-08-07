@@ -4,11 +4,7 @@
 
 This repo contains example nodes to help you get started building your own custom integrations for [n8n](https://n8n.io) and [n8n hackers](https://n8nhackers.com). 
 
-To make your custom node available to the community, you must create it as an npm package, and [submit it to the npm registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
-
-If you would like your node to be available on n8n cloud you can also [submit your node for verification](https://docs.n8n.io/integrations/creating-nodes/deploy/submit-community-nodes/).
-
-If you want to learn step by step how to build your own community nodes, [join our course](https://docs.n8n.io/integrations/creating-nodes/deploy/submit-community-nodes/) at n8nhackers.com
+If you want to learn step by step how to build your own community nodes, [join our course](https://docs.n8n.io/integrations/creating-nodes/deploy/submit-community-nodes/) at n8n hackers. 
 
 ## Prerequisites
 
@@ -83,6 +79,12 @@ npm login
 npm publish
 ```
 
+## Publication
+
+To make your custom node available to the community, you must create it as an npm package, and [submit it to the npm registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
+
+If you would like your node to be available on n8n cloud you can also [submit your node for verification](https://docs.n8n.io/integrations/creating-nodes/deploy/submit-community-nodes/).
+
 ## More information
 
 Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/creating-nodes/) for detailed information on building your own nodes.
@@ -98,9 +100,9 @@ If you have any issues, please [let us know on GitHub](https://github.com/n8nhac
 
 ## About
 
-Nodes by [n8nhackers.com](https://n8nhackers.com). For productive use and consulting on this, [contact us please](mailto:support@n8nhackers.com).
+Special thanks to [N8n nodemation](https://n8n.io) workflow automation by [Jan Oberhauser](https://www.linkedin.com/in/janoberhauser/).
 
-Special thanks to [N8n nodemation](https://n8n.io) workflow automation by Jan Oberhauser.
+This node was forked and adapted by [n8nhackers.com](https://n8nhackers.com) and [Miquel Colomer](https://www.linkedin.com/in/miquelcolomersalas/). For productive use and consulting on this, [contact us please](mailto:support@n8nhackers.com).
 
 ## License
 
