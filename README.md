@@ -13,7 +13,13 @@ If you would like your node to be available on n8n cloud you can also [submit yo
 You need the following installed on your development machine:
 
 * [git](https://git-scm.com/downloads)
-* Node.js and npm. Minimum version Node 20. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
+* Node.js and npm. Minimum version Node 20. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows). Depending on your n8n version, one node version or another will be required to start n8n: 
+	```
+	# n8n 1.103.1 requires lts/iron
+	# There is a .nvmrc that sets the required minimum version for n8n.
+	# Run to install the minimum version
+	nvm use
+	```
 * Install n8n with:
   ```
   npm install n8n -g
@@ -49,9 +55,13 @@ mkdir -p ~/.n8n/custom/
 # Go to custom directory. One-time.
 cd ~/.n8n/custom/
 
-# Link current community node in the directory. One-time.
+# Link current community node in the directory. 
 # It will be installed under ~/.n8n/custom/node_modules
+# Execute it every time you test a node
 npm link n8n-nodes-starter
+
+# Check existing link. One time.
+npm -g ls
 
 # Start n8n to test your community node. Always.
 n8n start

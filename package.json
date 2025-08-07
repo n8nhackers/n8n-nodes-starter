@@ -1,19 +1,19 @@
 {
-  "name": "n8n-nodes-<...>",
+  "name": "n8n-nodes-starter",
   "version": "0.1.0",
-  "description": "",
+  "description": "A starter template for creating n8n community nodes",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Miquel Colomer",
+    "email": "contact@n8nhackers.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/n8nhackers/n8n-nodes-starter.git"
   },
   "engines": {
     "node": ">=20.15"
@@ -51,5 +51,6 @@
   },
   "peerDependencies": {
     "n8n-workflow": "*"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
