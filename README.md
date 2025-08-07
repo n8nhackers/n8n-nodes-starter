@@ -44,21 +44,21 @@ These are the basic steps for working with the starter. For detailed guidance on
 # Build a compiled version. Always.
 npm run build
 
-# Link built version in the system. One-time.
+# Link built version in the system. First time execution.
 npm link
 
-# Create custom directory in .n8n if required. One-time.
+# Create custom directory in .n8n if required. First time execution.
 mkdir -p ~/.n8n/custom/
 
-# Go to custom directory. One-time.
+# Go to custom directory. First time execution.
 cd ~/.n8n/custom/
 
 # Link current community node in the directory. 
 # It will be installed under ~/.n8n/custom/node_modules
-# Execute it every time you test a node
+# First time execution.
 npm link n8n-nodes-starter
 
-# Check existing link. One time.
+# Check existing link. First time execution.
 npm -g ls
 
 # Start n8n to test your community node. Always.
