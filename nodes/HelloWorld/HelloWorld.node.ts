@@ -41,6 +41,17 @@ export class HelloWorld implements INodeType {
 				default: 'es',
 				description: 'Greeting language',
 			},
+			{
+				displayName: 'Language (2)',
+				name: 'language2',
+				type: 'options',
+				options: [
+					{ name: 'Spanish', value: 'es' },
+					{ name: 'English', value: 'en' },
+				],
+				default: 'es',
+				description: 'Greeting language',
+			},
 		],
 	};
 
