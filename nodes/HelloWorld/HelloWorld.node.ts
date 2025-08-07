@@ -6,6 +6,8 @@ import type {
 } from 'n8n-workflow';
 import { NodeConnectionType, NodeOperationError } from 'n8n-workflow';
 
+import { LoggerProxy as Logger } from 'n8n-workflow';
+
 export class HelloWorld implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Hello World',
@@ -66,7 +68,8 @@ export class HelloWorld implements INodeType {
 				}
 				item = items[itemIndex];
 
-				console.log(`Greeting: ${greeting}`);
+				// Dentro de tu método execute()
+				Logger.debug('Executing MyCommunityNode', { itemIndex, greeting });
 
 				item.json.greeting = greeting;
 			} catch (error) {
