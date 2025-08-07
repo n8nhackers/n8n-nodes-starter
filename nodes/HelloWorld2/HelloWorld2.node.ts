@@ -110,11 +110,7 @@ export class HelloWorld2 implements INodeType {
 
 				const language = this.getNodeParameter('language', itemIndex) as string;
 				switch (operation) {
-					case 'goodMorning':
-						greeting = language === 'es'
-							? `Buenos días, ${nameParam}`
-							: `Good morning, ${nameParam}`;
-						break;
+
 					case 'goodAfternoon':
 						greeting = language === 'es'
 							? `Buenas tardes, ${nameParam}`
@@ -125,10 +121,11 @@ export class HelloWorld2 implements INodeType {
 							? `Buenas noches, ${nameParam}`
 							: `Good night, ${nameParam}`;
 						break;
+					case 'goodMorning':
 					default:
 						greeting = language === 'es'
-							? `Hola, ${nameParam}`
-							: `Hello, ${nameParam}`;
+							? `Buenos días, ${nameParam}`
+							: `Good morning, ${nameParam}`;
 						break;
 				}
 
