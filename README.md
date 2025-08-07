@@ -2,11 +2,13 @@
 
 # n8n-nodes-starter
 
-This repo contains example nodes to help you get started building your own custom integrations for [n8n](https://n8n.io) and [n8n hackers](https://n8nhackers.com). It includes the node linter and other dependencies.
+This repo contains example nodes to help you get started building your own custom integrations for [n8n](https://n8n.io) and [n8n hackers](https://n8nhackers.com). 
 
 To make your custom node available to the community, you must create it as an npm package, and [submit it to the npm registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
 
 If you would like your node to be available on n8n cloud you can also [submit your node for verification](https://docs.n8n.io/integrations/creating-nodes/deploy/submit-community-nodes/).
+
+If you want to learn step by step how to build your own community nodes, [join our course](https://docs.n8n.io/integrations/creating-nodes/deploy/submit-community-nodes/) at n8nhackers.com
 
 ## Prerequisites
 
