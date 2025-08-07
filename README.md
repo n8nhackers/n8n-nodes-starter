@@ -60,6 +60,9 @@ npm link n8n-nodes-starter
 
 # Check existing link. First time execution.
 npm -g ls
+#output sample:
+# ├── n8n-nodes-brightdata@0.1.37 -> ./../../../../../Documents/companies/n8nhackers/n8n-nodes-brightdata
+# ├── n8n-nodes-starter@0.1.0 -> ./../../../../../Documents/companies/n8nhackers/n8n-nodes-starter
 
 # Start n8n to test your community node. Always.
 n8n start
