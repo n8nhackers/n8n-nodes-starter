@@ -1,0 +1,58 @@
+{
+  "name": "Sample n8n-nodes-starter triggers workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-starter.n8nHackersSecondsTrigger",
+      "typeVersion": 1,
+      "position": [
+        -192,
+        -176
+      ],
+      "id": "52449dbc-d94c-4f32-807c-8417f560f2e2",
+      "name": "N8nHackers Seconds Trigger",
+      "disabled": true
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-starter.n8nHackersWebhookTrigger",
+      "typeVersion": 1,
+      "position": [
+        48,
+        -176
+      ],
+      "id": "8ad0a1dd-fd88-4edc-8d7f-4ad83cda007f",
+      "name": "My Webhook Trigger",
+      "webhookId": "a0b9b14e-572a-406b-8720-298d29acd4a5",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "events": [
+          "update"
+        ]
+      },
+      "type": "n8n-nodes-starter.n8nHackersN8nTrigger",
+      "typeVersion": 1,
+      "position": [
+        -48,
+        32
+      ],
+      "id": "2aec0b44-405f-4cac-afc0-b1c89cdbf2ba",
+      "name": "Example n8n Trigger"
+    }
+  ],
+  "pinData": {},
+  "connections": {},
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "469b472e-c411-4195-98d5-407b43dcd08e",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ab6cd4c66f5eec7d8d0276c491bfb1b84818a10e112c088dd09287dfc9ff8a0"
+  },
+  "id": "i9XhpbMhJoFud7N4",
+  "tags": []
+}

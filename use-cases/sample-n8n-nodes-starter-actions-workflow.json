@@ -1,0 +1,136 @@
+{
+  "name": "Sample n8n-nodes-starter actions workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -960,
+        -112
+      ],
+      "id": "98afb54f-ed01-436b-9a89-a813982a87b1",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "operation": "getAllPeople"
+      },
+      "type": "n8n-nodes-base.n8nTrainingCustomerDatastore",
+      "typeVersion": 1,
+      "position": [
+        -608,
+        -112
+      ],
+      "id": "ce02aa0e-474e-4665-8def-3aeffcd895d9",
+      "name": "Customer Datastore (n8n training)"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-starter.n8nHackersHelloWorld",
+      "typeVersion": 1,
+      "position": [
+        -192,
+        -384
+      ],
+      "id": "42460995-a483-4742-8846-1aeb8478fb19",
+      "name": "N8nHackers Hello World"
+    },
+    {
+      "parameters": {
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-starter.n8nHackersHttpBin",
+      "typeVersion": 1,
+      "position": [
+        -192,
+        240
+      ],
+      "id": "b6207d64-aec1-4126-a208-715db8624b6a",
+      "name": "Perform a GET request",
+      "disabled": true
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-starter.n8nHackersHelloWorld2",
+      "typeVersion": 1,
+      "position": [
+        -192,
+        -176
+      ],
+      "id": "017be0c2-401a-471d-9629-c9b03b1061d0",
+      "name": "N8nHackers Hello World 2"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-starter.n8nHackersHelloWorld3",
+      "typeVersion": 1,
+      "position": [
+        -192,
+        48
+      ],
+      "id": "e2b17249-b135-4cee-b5a4-9a0480fe0d9b",
+      "name": "N8nHackers Hello World 3"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Customer Datastore (n8n training)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Customer Datastore (n8n training)": {
+      "main": [
+        [
+          {
+            "node": "N8nHackers Hello World",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Perform a GET request",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "N8nHackers Hello World 2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "N8nHackers Hello World 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "N8nHackers Hello World": {
+      "main": [
+        []
+      ]
+    },
+    "Perform a GET request": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "768bcdb5-c348-4ca3-9162-4a3d9c61086d",
+  "meta": {
+    "instanceId": "1ab6cd4c66f5eec7d8d0276c491bfb1b84818a10e112c088dd09287dfc9ff8a0"
+  },
+  "id": "pDt1pfU8YjfATs0q",
+  "tags": []
+}

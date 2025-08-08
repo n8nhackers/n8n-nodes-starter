@@ -91,7 +91,8 @@ If you would like your node to be available on n8n cloud you can also [submit yo
 
 You can also use the next ready-to-use samples for your n8n (self-hosted version):
 
-- [Sample n8n-nodes-starter](https://raw.githubusercontent.com/n8nhackers/n8n-nodes-starter/refs/heads/main/use-cases/sample-n8n-nodes-starter.json)![Sample n8n-nodes-starter](images/sample-n8n-nodes-starter.png?raw=true "Sample n8n-nodes-starter")
+- [Sample n8n-nodes-starter actions](https://raw.githubusercontent.com/n8nhackers/n8n-nodes-starter/refs/heads/main/use-cases/sample-n8n-nodes-starter-actions-workflow.json)![Sample n8n-nodes-starter](images/sample-n8n-nodes-starter-actions-workflow.png?raw=true "Sample n8n-nodes-starter actions")
+- [Sample n8n-nodes-starter triggers](https://raw.githubusercontent.com/n8nhackers/n8n-nodes-starter/refs/heads/main/use-cases/sample-n8n-nodes-starter-triggers-workflow.json)![Sample n8n-nodes-starter](images/sample-n8n-nodes-starter-triggers-workflow.png?raw=true "Sample n8n-nodes-starter triggers")
 
 ## More information
 

@@ -8,10 +8,11 @@ import { NodeConnectionType } from 'n8n-workflow';
 
 type eventType = 'Instance started' | 'Workflow activated' | 'Workflow updated' | undefined;
 
-export class ExampleN8nTrigger implements INodeType {
+export class N8nHackersN8nTrigger implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Example n8n Trigger',
-		name: 'exampleN8nTrigger',
+		displayName: 'N8nHackers n8n Trigger',
+		name: 'n8nHackersN8nTrigger',
+		icon: { light: 'file:n8nhackers.svg', dark: 'file:n8nhackers.svg' },
 		group: ['trigger'],
 		version: 1,
 		description: 'Handle events and perform actions on your n8n instance',

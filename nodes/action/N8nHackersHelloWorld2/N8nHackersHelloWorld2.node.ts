@@ -6,15 +6,16 @@ import type {
 } from 'n8n-workflow';
 import { NodeConnectionType, NodeOperationError } from 'n8n-workflow';
 
-export class HelloWorld2 implements INodeType {
+export class N8nHackersHelloWorld2 implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Hello World 2',
-		name: 'helloWorld2',
+		displayName: 'N8nHackers Hello World 2',
+		name: 'n8nHackersHelloWorld2',
+		icon: { light: 'file:n8nhackers.svg', dark: 'file:n8nhackers.svg' },
 		group: ['transform'],
 		version: 1,
 		description: 'Outputs a greeting message',
 		defaults: {
-			name: 'Hello World 2',
+			name: 'N8nHackers Hello World 2',
 		},
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],

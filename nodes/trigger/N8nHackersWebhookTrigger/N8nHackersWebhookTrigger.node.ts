@@ -9,10 +9,11 @@ import type {
 
 import { NodeConnectionType } from 'n8n-workflow';
 
-export class ExampleWebhookTrigger implements INodeType {
+export class N8nHackersWebhookTrigger implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Example Webhook Trigger',
-		name: 'exampleWebhookTrigger',
+		displayName: 'N8nHackers Webhook Trigger',
+		name: 'n8nHackersWebhookTrigger',
+		icon: { light: 'file:n8nhackers.svg', dark: 'file:n8nhackers.svg' },
 		group: ['trigger'],
 		version: 1,
 		description: 'Dispara el workflow mediante un webhook',

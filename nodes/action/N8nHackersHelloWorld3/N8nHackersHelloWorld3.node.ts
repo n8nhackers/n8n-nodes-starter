@@ -8,17 +8,17 @@ import { NodeConnectionType, NodeOperationError } from 'n8n-workflow';
 
 import { helloWorldResources, helloWorldOperations, helloWorldProperties } from './HelloWorld3Description';
 
-export class HelloWorld3 implements INodeType {
+export class N8nHackersHelloWorld3 implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Hello World 3',
-		name: 'helloWorld3',
-		icon: { light: 'file:helloworld3.svg', dark: 'file:helloworld3.svg' },
+		displayName: 'N8nHackers Hello World 3',
+		name: 'n8nHackersHelloWorld3',
+		icon: { light: 'file:n8nhackers.svg', dark: 'file:n8nhackers.svg' },
 
 		group: ['transform'],
 		version: 1,
 		description: 'Outputs a greeting message',
 		defaults: {
-			name: 'Hello World 3',
+			name: 'N8nHackers Hello World 3',
 		},
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],

@@ -39,13 +39,13 @@
       "dist/credentials/HttpBinApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/action/HelloWorld/HelloWorld.node.js",
-      "dist/nodes/action/HelloWorld2/HelloWorld2.node.js",
-      "dist/nodes/action/HelloWorld3/HelloWorld3.node.js",
-      "dist/nodes/action/HttpBin/HttpBin.node.js",
-      "dist/nodes/trigger/ExampleSecondsTrigger/ExampleSecondsTrigger.node.js",
-      "dist/nodes/trigger/ExampleWebhookTrigger/ExampleWebhookTrigger.node.js",
-      "dist/nodes/trigger/ExampleN8nTrigger/ExampleN8nTrigger.node.js"
+      "dist/nodes/action/N8nHackersHelloWorld/N8nHackersHelloWorld.node.js",
+      "dist/nodes/action/N8nHackersHelloWorld2/N8nHackersHelloWorld2.node.js",
+      "dist/nodes/action/N8nHackersHelloWorld3/N8nHackersHelloWorld3.node.js",
+      "dist/nodes/action/N8nHackersHttpBin/N8nHackersHttpBin.node.js",
+      "dist/nodes/trigger/N8nHackersSecondsTrigger/N8nHackersSecondsTrigger.node.js",
+      "dist/nodes/trigger/N8nHackersWebhookTrigger/N8nHackersWebhookTrigger.node.js",
+      "dist/nodes/trigger/N8nHackersN8nTrigger/N8nHackersN8nTrigger.node.js"
     ]
   },
   "devDependencies": {

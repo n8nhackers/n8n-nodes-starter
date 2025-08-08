@@ -8,15 +8,16 @@ import { NodeConnectionType, NodeOperationError } from 'n8n-workflow';
 
 import { LoggerProxy as Logger } from 'n8n-workflow';
 
-export class HelloWorld implements INodeType {
+export class N8nHackersHelloWorld implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Hello World',
-		name: 'helloWorld',
+		displayName: 'N8nHackers Hello World',
+		name: 'n8nHackersHelloWorld',
+		icon: { light: 'file:n8nhackers.svg', dark: 'file:n8nhackers.svg' },
 		group: ['transform'],
 		version: 1,
-		description: 'Outputs a Hello World message',
+		description: 'Outputs a greeting message',
 		defaults: {
-			name: 'Hello World',
+			name: 'N8nHackers Hello World',
 		},
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],

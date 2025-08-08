@@ -10,14 +10,15 @@ import { NodeConnectionType } from 'n8n-workflow';
 import { setInterval, clearInterval } from 'timers';
 
 
-export class ExampleSecondsTrigger implements INodeType {
+export class N8nHackersSecondsTrigger implements INodeType {
     description: INodeTypeDescription = {
-        displayName: 'Example Seconds Trigger',
-        name: 'exampleSecondsTrigger',
+        displayName: 'N8nHackers Seconds Trigger',
+        name: 'n8nHackersSecondsTrigger',
         group: ['trigger'],
+				icon: { light: 'file:n8nhackers.svg', dark: 'file:n8nhackers.svg' },
         version: 1,
         description: 'Dispara el workflow cada X segundos',
-        defaults: { name: 'My Seconds Trigger' },
+        defaults: { name: 'N8nHackers Seconds Trigger' },
         inputs: [],
 				outputs: [NodeConnectionType.Main],
         properties: [
