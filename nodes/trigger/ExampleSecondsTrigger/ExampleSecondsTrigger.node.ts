@@ -17,7 +17,7 @@ export class ExampleSecondsTrigger implements INodeType {
         group: ['trigger'],
         version: 1,
         description: 'Dispara el workflow cada X segundos',
-        defaults: { name: 'My Custom Trigger' },
+        defaults: { name: 'My Seconds Trigger' },
         inputs: [],
 				outputs: [NodeConnectionType.Main],
         properties: [

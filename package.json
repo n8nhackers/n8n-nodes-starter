@@ -44,7 +44,8 @@
       "dist/nodes/action/HelloWorld3/HelloWorld3.node.js",
       "dist/nodes/action/HttpBin/HttpBin.node.js",
       "dist/nodes/trigger/ExampleSecondsTrigger/ExampleSecondsTrigger.node.js",
-      "dist/nodes/trigger/ExampleWebhookTrigger/ExampleWebhookTrigger.node.js"
+      "dist/nodes/trigger/ExampleWebhookTrigger/ExampleWebhookTrigger.node.js",
+      "dist/nodes/trigger/ExampleN8nTrigger/ExampleN8nTrigger.node.js"
     ]
   },
   "devDependencies": {

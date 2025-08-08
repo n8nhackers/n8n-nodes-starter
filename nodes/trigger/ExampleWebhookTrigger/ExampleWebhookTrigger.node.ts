@@ -1,51 +1,88 @@
-import {
-    ITriggerFunctions,
-    ITriggerResponse,
-    INodeType,
-    INodeTypeDescription,
+import type {
+	IWebhookFunctions,
+	IDataObject,
+	INodeType,
+	INodeTypeDescription,
+	IWebhookResponseData,
+	ITriggerFunctions,
 } from 'n8n-workflow';
 
 import { NodeConnectionType } from 'n8n-workflow';
 
-import { setInterval, clearInterval } from 'timers';
-
-
 export class ExampleWebhookTrigger implements INodeType {
-    description: INodeTypeDescription = {
-        displayName: 'Example Webhook Trigger',
-        name: 'exampleWebhookTrigger',
-        group: ['trigger'],
-        version: 1,
-        description: 'Dispara el workflow cada X segundos',
-        defaults: { name: 'My Custom Trigger' },
-        inputs: [],
-				outputs: [NodeConnectionType.Main],
-        properties: [
-            {
-                displayName: 'Intervalo (Segundos)',
-                name: 'interval',
-                type: 'number',
-                default: 60,
-                required: true,
-                description: 'Tiempo entre emisiones en segundos',
-            },
-        ],
-    };
+	description: INodeTypeDescription = {
+		displayName: 'Example Webhook Trigger',
+		name: 'exampleWebhookTrigger',
+		group: ['trigger'],
+		version: 1,
+		description: 'Dispara el workflow mediante un webhook',
+		defaults: {
+			name: 'My Webhook Trigger',
+		},
+		inputs: [],
+		outputs: [NodeConnectionType.Main],
+		properties: [
+			{
+				displayName: 'Mensaje',
+				name: 'message',
+				type: 'string',
+				default: 'Webhook recibido',
+				description: 'Mensaje que se incluirá en la salida',
+			},
+		],
+		webhooks: [
+			{
+				name: 'default',
+				httpMethod: 'POST',
+				path: 'webhook',
+			},
+		],
+	};
 
-    async trigger(this: ITriggerFunctions): Promise<ITriggerResponse> {
-        const interval = this.getNodeParameter('interval', 0) as number;
+	async activate(this: ITriggerFunctions): Promise<void> {
+		// Esta función se llama cuando el workflow se activa.
+		// Puedes realizar cualquier inicialización necesaria aquí.
+		return;
+	}
 
-        const intervalRef = setInterval(() => {
-            this.emit([this.helpers.returnJsonArray([{
-                message: 'Ejecutado trigger',
-                time: new Date().toISOString(),
-            }])]);
-        }, interval * 1000);
+	async deactivate(this: ITriggerFunctions): Promise<void> {
+		// Esta función se llama cuando se desactiva el workflow.
+		// Limpia aquí cualquier recurso o suscripción que hayas creado.
+		return;
+	}
 
-        return {
-            closeFunction: async () => {
-                clearInterval(intervalRef);
-            },
-        };
-    }
+	async create(this: ITriggerFunctions): Promise<{ webhookId: string }> {
+		// Retorna el identificador del webhook creado.
+		// El identificador debe coincidir con el configurado en la sección 'webhooks' de la descripción.
+		return { webhookId: 'default' };
+	}
+
+	async webhook(this: IWebhookFunctions): Promise<IWebhookResponseData> {
+		const bodyData = this.getBodyData();
+
+		// Check if the webhook is only the ping from service that confirms the subscrip
+		if (bodyData.hook_id !== undefined && bodyData.action === undefined) {
+			// Is only the ping and not an actual webhook call. So return 'OK'
+			// but do not start the workflow.
+
+			return {
+				webhookResponse: 'OK',
+			};
+		}
+
+		// Is a regular webhook call
+
+		// TODO: Add headers & requestPath
+		const returnData: IDataObject[] = [];
+
+		returnData.push({
+			body: bodyData,
+			headers: this.getHeaderData(),
+			query: this.getQueryData(),
+		});
+
+		return {
+			workflowData: [this.helpers.returnJsonArray(returnData)],
+		};
+	}
 }
