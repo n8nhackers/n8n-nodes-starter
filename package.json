@@ -39,13 +39,16 @@
       "dist/credentials/HttpBinApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/HelloWorld/HelloWorld.node.js",
-      "dist/nodes/HelloWorld2/HelloWorld2.node.js",
-      "dist/nodes/HelloWorld3/HelloWorld3.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/action/HelloWorld/HelloWorld.node.js",
+      "dist/nodes/action/HelloWorld2/HelloWorld2.node.js",
+      "dist/nodes/action/HelloWorld3/HelloWorld3.node.js",
+      "dist/nodes/action/HttpBin/HttpBin.node.js",
+      "dist/nodes/trigger/ExampleSecondsTrigger/ExampleSecondsTrigger.node.js",
+      "dist/nodes/trigger/ExampleWebhookTrigger/ExampleWebhookTrigger.node.js"
     ]
   },
   "devDependencies": {
+    "@types/node": "^24.2.0",
     "@typescript-eslint/parser": "~8.32.0",
     "eslint": "^8.57.0",
     "eslint-plugin-n8n-nodes-base": "^1.16.3",
