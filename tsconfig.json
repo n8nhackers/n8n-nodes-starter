@@ -4,7 +4,7 @@
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"target": "es2019",
-		"types": ["node"],
+    "types": ["node", "jest"],
 		"lib": ["es2019", "es2020", "es2022.error"],
 		"removeComments": true,
 		"useUnknownInCatchVariables": false,
@@ -27,5 +27,6 @@
 		"nodes/**/*",
 		"nodes/**/*.json",
 		"package.json",
+		"tests/**/*",
 	],
 }

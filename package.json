@@ -27,7 +27,8 @@
     "format": "prettier nodes credentials --write",
     "lint": "eslint nodes credentials package.json",
     "lintfix": "eslint nodes credentials package.json --fix",
-    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json"
+    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json",
+    "test": "jest --runInBand"
   },
   "files": [
     "dist"
@@ -49,13 +50,16 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/node": "^24.2.0",
     "@typescript-eslint/parser": "~8.32.0",
     "eslint": "^8.57.0",
     "eslint-plugin-n8n-nodes-base": "^1.16.3",
     "gulp": "^5.0.0",
+    "jest": "^29.7.0",
     "nodemon": "^3.1.10",
     "prettier": "^3.5.3",
+    "ts-jest": "^29.4.1",
     "typescript": "^5.8.2"
   },
   "peerDependencies": {
