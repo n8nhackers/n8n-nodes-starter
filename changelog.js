@@ -30,13 +30,21 @@ function getChangelogBetween(oldRev, newRev) {
 }
 
 function generateChangelog() {
-	const tags = getTags();
+	let tags = getTags();
+	let usePackageVersion = false;
+	if (tags.length === 0) {
+		// No tags in repository; use package.json version as the first (and only) tag.
+		const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
+		tags = [pkg.version];
+		usePackageVersion = true;
+	}
+
 	let changelog = "# Changelog\n\n";
-	// Start from the very first commit if tags exist
+	// Start from the very first commit in all cases.
 	let prev = getRootCommit();
 
 	for (const tag of tags) {
-		const date = getTagDate(tag);
+		let date = usePackageVersion ? new Date().toISOString().substr(0, 10) : getTagDate(tag);
 		let section = `## ${tag} - ${date}\n\n`;
 		const commits = getChangelogBetween(prev, tag);
 		section += commits ? commits + "\n\n" : "No changes.\n\n";

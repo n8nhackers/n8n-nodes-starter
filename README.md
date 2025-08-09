@@ -94,6 +94,11 @@ You can also use the next ready-to-use samples for your n8n (self-hosted version
 - [Sample n8n-nodes-starter actions](https://raw.githubusercontent.com/n8nhackers/n8n-nodes-starter/refs/heads/main/use-cases/sample-n8n-nodes-starter-actions-workflow.json)![Sample n8n-nodes-starter](images/sample-n8n-nodes-starter-actions-workflow.png?raw=true "Sample n8n-nodes-starter actions")
 - [Sample n8n-nodes-starter triggers](https://raw.githubusercontent.com/n8nhackers/n8n-nodes-starter/refs/heads/main/use-cases/sample-n8n-nodes-starter-triggers-workflow.json)![Sample n8n-nodes-starter](images/sample-n8n-nodes-starter-triggers-workflow.png?raw=true "Sample n8n-nodes-starter triggers")
 
+## Utilities
+You can use a couple of scripts available in this repository:
+- ./bump.js: Creates a new tag (major, minor or patch) depending on your changes
+- ./changelog.js: Regenerates your CHANGELOG.md by analyzing existing tags in the repository
+
 ## More information
 
 Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/creating-nodes/) for detailed information on building your own nodes.
