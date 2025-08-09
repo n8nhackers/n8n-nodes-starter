@@ -1,60 +1,28 @@
-#!/usr/bin/env node
-const { execSync } = require("child_process");
-const fs = require("fs");
-
-function sh(cmd) {
-	return execSync(cmd, { encoding: "utf8", stdio: ["pipe", "pipe", "inherit"] }).trim();
-}
-
-function getTags() {
-	// List tags in ascending order (oldest first)
-	return sh("git tag --sort=version:refname")
-		.split("\n")
-		.filter(Boolean);
-}
-
-function getRootCommit() {
-	// Get the first commit of the repository
-	return sh("git rev-list --max-parents=0 HEAD");
-}
-
-function getTagDate(tag) {
-	// Get the tag creation date (using the tag commit)
-	return sh(`git log -1 --format=%ad --date=short ${tag}`);
-}
-
 function getChangelogBetween(oldRev, newRev) {
-	// Get commit logs between revisions with a compact format
-	const logRaw = sh(`git log ${oldRev}..${newRev} --pretty=format:"- %s (%h, %ad)" --date=short`);
-	return logRaw;
+	const delimiter = "----DELIM----";
+	// Use a delimiter to separate commit messages.
+	const logRaw = sh(
+		`git log ${oldRev}..${newRev} --pretty=format:"%B${delimiter}%h, %ad" --date=short`
+	);
+	if (!logRaw.trim()) return "";
+	// Split raw log into commit entries using the delimiter.
+	const commitEntries = logRaw.split(delimiter).filter(entry => entry.trim().length > 0);
+
+	const formattedCommits = commitEntries.map(entry => {
+		const lines = entry.trim().split("\n");
+		// The last line is metadata (hash and date).
+		const meta = lines.pop().trim();
+		const message = lines.join("\n").trim();
+		if (!message) return `- (${meta})`;
+		// Format the commit:
+		// • The first line gets a bullet and metadata appended.
+		// • Subsequent lines are indented.
+		const messageLines = message.split("\n");
+		let formatted = `- ${messageLines[0]} (${meta})\n`;
+		for (let i = 1; i < messageLines.length; i++) {
+			formatted += `  ${messageLines[i]}\n`;
+		}
+		return formatted.trim();
+	});
+	return formattedCommits.join("\n");
 }
-
-function generateChangelog() {
-	let tags = getTags();
-	let usePackageVersion = false;
-	if (tags.length === 0) {
-		// No tags in repository; use package.json version as the first (and only) tag.
-		const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
-		tags = [pkg.version];
-		usePackageVersion = true;
-	}
-
-	let changelog = "# Changelog\n\n";
-	// Start from the very first commit in all cases.
-	let prev = getRootCommit();
-
-	for (const tag of tags) {
-		let date = usePackageVersion ? new Date().toISOString().substr(0, 10) : getTagDate(tag);
-		let section = `## ${tag} - ${date}\n\n`;
-		const commits = getChangelogBetween(prev, tag);
-		section += commits ? commits + "\n\n" : "No changes.\n\n";
-		changelog += section;
-		prev = tag;
-	}
-	return changelog;
-}
-
-// Generate changelog and write it to CHANGELOG.md
-const changelogContent = generateChangelog();
-fs.writeFileSync("CHANGELOG.md", changelogContent, "utf8");
-console.log("CHANGELOG.md generated successfully.");
