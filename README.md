@@ -101,10 +101,7 @@ Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/
 ## Version history
 
 Here you can find the list of changes applied to this node:
-- 0.0.4: Agregamos tests unitarios
-- 0.0.3: Agregamos ejemplos de nodos Trigger
-- 0.0.2: Agregamos ejemplos de nodos Action
-- 0.0.1: Initial version
+- 0.1.0: Initial version
 
 ## Issues
 
