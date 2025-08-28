@@ -47,6 +47,7 @@
       "dist/nodes/action/N8nHackersHelloWorld2/N8nHackersHelloWorld2.node.js",
       "dist/nodes/action/N8nHackersHelloWorld3/N8nHackersHelloWorld3.node.js",
       "dist/nodes/action/N8nHackersHttpBin/N8nHackersHttpBin.node.js",
+
       "dist/nodes/trigger/N8nHackersSecondsTrigger/N8nHackersSecondsTrigger.node.js",
       "dist/nodes/trigger/N8nHackersWebhookTrigger/N8nHackersWebhookTrigger.node.js",
       "dist/nodes/trigger/N8nHackersN8nTrigger/N8nHackersN8nTrigger.node.js"

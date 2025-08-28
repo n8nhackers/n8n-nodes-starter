@@ -96,8 +96,8 @@ You can also use the next ready-to-use samples for your n8n (self-hosted version
 
 ## Utilities
 You can use a couple of scripts available in this repository:
-- ./bump.js: Creates a new tag (major, minor or patch) depending on your changes
-- ./changelog.js: Regenerates your CHANGELOG.md by analyzing existing tags in the repository
+- ./scripts/bump.js: Creates a new tag (major, minor or patch) depending on your changes
+- ./scripts/changelog.js: Regenerates your CHANGELOG.md by analyzing existing tags in the repository
 
 ## More information
 

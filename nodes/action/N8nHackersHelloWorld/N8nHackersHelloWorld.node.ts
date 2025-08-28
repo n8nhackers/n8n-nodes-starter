@@ -91,7 +91,7 @@ export class N8nHackersHelloWorld implements INodeType {
 				}
 				item = items[itemIndex];
 
-				// Dentro de tu método execute()
+				// Logger.debug('Executing MyCommunityNode', { itemIndex, greeting });
 				Logger.debug('Executing MyCommunityNode', { itemIndex, greeting });
 
 				item.json.greeting = greeting;
